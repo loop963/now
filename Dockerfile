@@ -10,5 +10,7 @@ RUN apt-get update \
     && apt-get autoremove -y \
     && apt-get clean \
     && rm -rf gost_2.4-dev20170303_linux_amd64.tar.gz  /var/lib/apt/lists/*
-
+      
+EXPOSE 8080 8088/udp 8338
+  
 ENTRYPOINT ["/root/gost"]
